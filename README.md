@@ -1,2 +1,12 @@
-# gpt_transcription_bot
-A Telegram bot which processes a Youtube video, transcribe it and send your prompt with this transcription to GPT-3.5-turbo
+# GPT Transcription Bot
+Телеграм бот, который транскрибирует видео с Youtube и отправляет полученную аннотацию вместе с данным промптом в GPT модель и возвращает результатю
+
+## How to use
+Запустите **main.py**. Переменные TOKEN (токен на запуск бота в Telegram) и OPENAI_API_KEY (ключ на использование моделей GPT в сторонних API) спрятаны в окружении, поэтому я рекомендую создать собственные токены и вставить вместо значений в соответствующей части. 
+Базовый язык интерфейса - русский, но можно поменять, заменив параметр language в функции транксрибирования (тогда бот будет обрабатывать другие языки)
+Пример кода:
+targetLanguages = ["en-GB", "ru-RU", "fr-FR"]
+for eachLanguage in targetLanguages:
+    Audio_text_from_wav_file = r.recognize_google(audio, language = eachLanguage).
+
+В остальном бот стабильно работает вне зависимости от хостинг платформы.
